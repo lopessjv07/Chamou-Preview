@@ -24,7 +24,7 @@ export default function Body() {
             </div>
             <div className="hero-image">
               <img
-                src="hero-illustration.jpg"
+                src="/img/hero-illustration.jpg"
                 alt="Freelancers trabalhando"
               />
               <div className="floating-card card-1">
