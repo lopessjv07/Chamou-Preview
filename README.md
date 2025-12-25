@@ -1,73 +1,60 @@
-# React + TypeScript + Vite
+# Chamou – Preview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este repositório contém a **página de preview do projeto Chamou** (também conhecido como *20 pila ao contrário*).
 
-Currently, two official plugins are available:
+O objetivo desta página **não é ser o produto final**, mas sim **explicar de forma clara e direta como a plataforma funciona**, qual problema ela resolve e qual foi a lógica por trás da sua construção.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 📌 O que é o Chamou-Preview?
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+O **Chamou-Preview** é uma página institucional e explicativa usada no meu portfólio.
 
-## Expanding the ESLint configuration
+Ela apresenta:
+- O conceito do projeto Chamou  
+- O problema que motivou a criação da plataforma  
+- A solução proposta  
+- Um overview de como o sistema funciona  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Tudo de forma **simples, objetiva e focada em entendimento**, sem linguagem de marketing.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🧠 Sobre o Projeto Chamou
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+O Chamou é uma plataforma de **vagas instantâneas**, onde empresas publicam trabalhos rápidos e pessoas disponíveis podem aceitar essas oportunidades de forma direta.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+A ideia central é inverter a lógica tradicional:
+> em vez de pessoas disputarem vagas, **as vagas encontram pessoas disponíveis**.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Este preview existe para contextualizar o projeto e demonstrar a visão de produto.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## 🚀 Deploy
+
+A página do Chamou-Preview está publicada e pode ser acessada aqui:
+
+👉 **[link do deploy aqui]**
+
+---
+
+## 🛠️ Tecnologias utilizadas
+
+- React
+- TypeScript
+- CSS puro
+
+---
+
+## 📎 Observação
+
+Este repositório **não contém o código completo da plataforma Chamou**.  
+Ele representa apenas a **página de apresentação do projeto**, criada para fins de portfólio.
+
+---
+
+## 👤 Autor
+
+**João Vitor Lopes**  
+Desenvolvedor Front-end / Full Stack em formação
