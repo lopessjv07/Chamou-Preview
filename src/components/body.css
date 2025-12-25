@@ -1,0 +1,281 @@
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #0056b3;
+    --subtitulo: #5b5b5b;
+    --fundo: #ffffff;
+}
+
+/* Base */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+.body {
+    margin: auto;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.body__container {
+    margin: 0;
+    padding: clamp(18px, 4vw, 70px) clamp(14px, 4vw, 70px);
+}
+
+.body__text {
+    font-size: clamp(1rem, 0.95rem + 0.35vw, 1.1rem);
+    line-height: 1.65;
+    max-width: 75ch;
+}
+
+.body_title {
+    font-size: clamp(1.6rem, 1.2rem + 2vw, 2.5rem);
+    line-height: 1.15;
+    max-width: 22ch;
+}
+
+.body__sectionn {
+    margin: clamp(10px, 2vw, 20px);
+}
+
+ul {
+    font-size: clamp(1rem, 0.96rem + 0.25vw, 1.08rem);
+    line-height: 1.8;
+    margin: 0;
+    padding-left: 1.1rem;
+}
+
+/* =========== Hero =========== */
+
+b {
+    color: #005cbe;
+}
+
+.hero {
+    align-items: center;
+    display: flex;
+    /* melhora em mobile com barras do navegador (fallback abaixo) */
+    min-height: 100svh;
+    overflow: hidden;
+    padding: clamp(24px, 5vw, 64px) 0;
+    position: relative;
+}
+
+@supports not (min-height: 100svh) {
+    .hero {
+        min-height: 100vh;
+    }
+}
+
+.hero-container {
+    align-items: center;
+    display: grid;
+    gap: clamp(1.25rem, 4vw, 6rem);
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 clamp(14px, 3vw, 20px);
+    width: 100%;
+}
+
+.hero-content {
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: clamp(1.9rem, 1.2rem + 3.4vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0 0 clamp(0.75rem, 2vw, 1.5rem) 0;
+}
+
+.hero-subtitle {
+    color: var(--subtitulo);
+    font-size: clamp(1rem, 0.95rem + 0.45vw, 1.2rem);
+    line-height: 1.6;
+    margin: 0 0 clamp(1rem, 2.5vw, 2rem) 0;
+    max-width: 60ch;
+}
+
+.hero-cta {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    margin-bottom: clamp(0.9rem, 2vw, 2rem);
+}
+
+.hero-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.feature-item {
+    align-items: center;
+    color: var(--subtitulo);
+    display: flex;
+    gap: 0.5rem;
+}
+
+path {
+    color: #0051a8;
+}
+
+.hero-image {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-image img {
+    border-radius: clamp(14px, 2vw, 20px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.floating-card {
+    animation: float 6s ease-in-out infinite;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 0.9rem 1.2rem;
+    position: absolute;
+    max-width: 70%;
+}
+
+/* posicionamento desktop (como você já tinha) */
+.card-1 {
+    animation-delay: 0s;
+    left: -10%;
+    top: 20%;
+}
+
+.card-2 {
+    animation-delay: 2s;
+    right: -10%;
+    top: 60%;
+}
+
+.card-3 {
+    animation-delay: 4s;
+    bottom: 20%;
+    left: -5%;
+}
+
+.card-4 {
+    animation-delay: 2s;
+    right: -10%;
+    top: 20%;
+}
+
+.card-content {
+    align-items: center;
+    display: flex;
+    gap: 0.5rem;
+    white-space: nowrap;
+}
+
+.hero-background {
+    background: linear-gradient(135deg, #006ce0 0%, #0056b3 100%);
+    border-radius: 0 0 0 40px;
+    height: 90%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    z-index: 1;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* ===== Breakpoints (cobre “todos os aparelhos” com mobile-first real) ===== */
+
+/* Tablets e menores */
+@media (max-width: 1024px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-background {
+        border-radius: 0;
+        height: 100%;
+        opacity: 0.1;
+        width: 100%;
+    }
+
+    /* evita cards cortados em telas médias */
+    .floating-card {
+        display: none;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .hero-cta {
+        flex-direction: column;
+    }
+}
+
+/* Mobile pequeno */
+@media (max-width: 480px) {
+    .body__container {
+        padding: 18px 14px;
+    }
+
+    .hero-background {
+        display: none;
+    }
+
+    .hero-title {
+        font-size: clamp(1.7rem, 7vw, 2.15rem);
+    }
+}
+
+/* Acessibilidade: reduz movimento quando o usuário prefere menos animação */
+@media (prefers-reduced-motion: reduce) {
+    .floating-card {
+        animation: none;
+    }
+}
+
+@media (max-width: 420px) {
+    .main-phone{
+        padding: 10px;
+    }
+    
+    .hero-image {
+        width: 300px;
+        margin: auto;
+        margin-bottom: -230px;
+    }
+    .hero{
+        margin-top: -180px;
+    }
+}
